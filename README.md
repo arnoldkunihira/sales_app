@@ -17,9 +17,9 @@ The main functionality for the sales web application is:
 - Store manager logs into web application platform and views a mini dashboard
 - Navigates to CSV File Upload link to upload a CSV file
 - When a user selects a CSV file for upload, they click upload button which then emits a flash message of "queued for importing"
-- The CSV file is split into many individual files with an extension "csv" using "Laravel queues" as it can not be all inserted into the DB all at once.
+- The queued CSV file for importing is split into many individual files with an extension "csv" using "Laravel queues" as the data in the file can not all be inserted into the DB all at once.
 - The split files are then saved into a resource directory called "pending_files" in the resources folder
-- A table pulls data from the database with CSV data and displays it as Sales records.
+- The data inserted into the table during queued importing is then displayed on the mini dashboard as Sales records.
 
 ## Requirements
 
