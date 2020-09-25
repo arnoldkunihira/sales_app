@@ -23,7 +23,7 @@ The main functionality for the sales web application is:
 
 ## Requirements
 
-The minimum requirement by this project template is your Web server supports PHP 7.2.5 and make sure you have composer installed on your computer locally.
+The minimum requirement by this project template is your Web server supports PHP 7.2.5 and make sure you have composer and node package manager (npm) installed on your computer locally.
 
 ## Installation
 
@@ -43,6 +43,21 @@ composer install
 
 ~~~
 composer update 
+~~~
+
+
+### Writing CSS
+Before compiling your CSS, install your project's frontend dependencies using the Node package manager (NPM)
+
+~~~
+npm install 
+~~~
+
+### then
+You can compile your SASS files to plain CSS using Laravel Mix.
+
+~~~
+npm run dev
 ~~~
 
 ### Now you should be able to access the application through the following URL:
