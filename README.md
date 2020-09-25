@@ -13,17 +13,17 @@ sales_app is a web application system at an international sales firm which sales
 
 The main functionality for the sales web application is: 
 
-- Store manager registers
-- Store manager logs into web application platform and views a mini dashboard
-- Navigates to CSV File Upload link to upload a CSV file
-- When a user selects a CSV file for upload, they click upload button which then emits a flash message of "queued for importing"
+- Store manager registers.
+- Store manager logs into web application platform and views a mini dashboard.
+- Navigates to CSV File Upload link to upload a CSV file.
+- When a user selects a CSV file for upload, they click upload button which then emits a flash message of "queued for importing".
 - The queued CSV file for importing is split into many individual files with an extension "csv" using "Laravel queues" as the data in the file can not all be inserted into the DB all at once.
-- The split files are then saved into a resource directory called "pending_files" in the resources folder
+- The split files are then saved into a resource directory called "pending_files" in the resources folder.
 - The data inserted into the table during queued importing is then displayed on the mini dashboard as Sales records.
 
 ## Requirements
 
-The minimum requirement by this project template is your Web server supports PHP 7.2.5 and make sure you have composer and node package manager (npm) installed on your computer locally.
+The minimum requirement by this project template is your web server supports PHP 7.2.5 and make sure you have composer and node package manager (npm) installed on your computer locally.
 
 ## Installation
 
