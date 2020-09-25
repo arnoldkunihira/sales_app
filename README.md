@@ -16,11 +16,14 @@ The main functionality for the sales web application is:
 - Store manager registers
 - Store manager Logs into platform and views a mini dashboard
 - Navigates to CSV File Upload link to upload a CSV file
+- When a user selects a CSV file for upload, they click upload button which then emits a flash message of "queued for importing"
+- The CSV file is split into many individual files with an extension "csv" using "Laravel queues" as it can not be all inserted into the DB all at once.
+- The split files are then saved into a resource directory called "pending_files" in the resources folder
 - A table pulls data from the database with CSV data and displays it as Sales records.
 
 ## Requirements
 
-The minimum requirement by this project template is your Web server supports PHP 7.2.5 and make sure you have composer installed locally on your computer locally.
+The minimum requirement by this project template is your Web server supports PHP 7.2.5 and make sure you have composer installed on your computer locally.
 
 ## Installation
 
