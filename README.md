@@ -14,7 +14,7 @@ sales_app is a web application system at an international sales firm which sales
 The main functionality for the sales web application is: 
 
 - Store manager registers
-- Store manager Logs into platform and views a mini dashboard
+- Store manager logs into web application platform and views a mini dashboard
 - Navigates to CSV File Upload link to upload a CSV file
 - When a user selects a CSV file for upload, they click upload button which then emits a flash message of "queued for importing"
 - The CSV file is split into many individual files with an extension "csv" using "Laravel queues" as it can not be all inserted into the DB all at once.
@@ -27,7 +27,7 @@ The minimum requirement by this project template is your Web server supports PHP
 
 ## Installation
 
-### Install via Git to a web server directory such as www or htdocs depending on the web server used (Wamp or xamp)
+### Install via Git to a web server directory such as www or htdocs depending on the web server used (wamp or xamp)
 
 ~~~
 git clone https://github.com/arnoldkunihira/sales_app.git
@@ -83,7 +83,11 @@ php artisan migrate
 
 If the configuration was followed as above, all should be well by accessing the application URL above.
 
-- Start with registering a new user (store manager)
+## NOTE
+- When uploading a CSV file, make sure you run this command below for Job queuing
+~~~
+php artisan queue:work
+~~~
 
 ## License
 
