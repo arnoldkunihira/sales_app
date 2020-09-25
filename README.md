@@ -83,7 +83,7 @@ php artisan migrate
 
 If the configuration was followed as above, all should be well by accessing the application URL above.
 
-## NOTE
+### NOTE
 - When uploading a CSV file, make sure you run this command below for Job queuing
 ~~~
 php artisan queue:work
@@ -91,4 +91,4 @@ php artisan queue:work
 
 ## License
 
-This license is under the Laravel framework which is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The sales application license is under the Laravel framework which is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
