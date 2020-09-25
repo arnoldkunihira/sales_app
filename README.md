@@ -7,55 +7,81 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## Sales Web Application
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+sales_app is a web application system at an international sales firm which sales goods both online and from retail stores.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The main functionality for the sales web application is: 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Store manager registers
+- Store manager Logs into platform and views a mini dashboard
+- Navigates to CSV File Upload link to upload a CSV file
+- A table pulls data from the database with CSV data and displays it as Sales records.
 
-## Learning Laravel
+## Requirements
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The minimum requirement by this project template is your Web server supports PHP 7.2.5 and make sure you have composer installed locally on your computer locally.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation
 
-## Laravel Sponsors
+### Install via Git to a web server directory such as www or htdocs depending on the web server used (Wamp or xamp)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+~~~
+git clone https://github.com/arnoldkunihira/sales_app.git
+~~~
 
-### Premium Partners
+### Run composer Install and composer update
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+~~~
+composer install 
+~~~
 
-## Contributing
+### then
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+~~~
+composer update 
+~~~
 
-## Code of Conduct
+### Now you should be able to access the application through the following URL:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+~~~
+http://localhost/sales_app/public/
+~~~
 
-## Security Vulnerabilities
+## CONFIGURATION
+-------------
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Database
+
+Rename `.env.example` file to `.env` and edit the file with real data, for example:
+
+~~~
+APP_NAME="Sales Application"
+~~~
+
+~~~
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=<db_name>
+DB_USERNAME=<db_username>
+DB_PASSWORD=<db_password>
+~~~
+
+~~~
+QUEUE_CONNECTION=database
+~~~
+
+Create a database <db_name>, you should then run the migrate command to run pending migrations to setup the database using the command below:
+
+~~~
+php artisan migrate
+~~~
+
+If the configuration was followed as above, all should be well by accessing the application URL above.
+
+- Start with registering a new user (store manager)
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This license is under the Laravel framework which is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
