@@ -67,7 +67,6 @@ http://localhost/sales_app/public/
 ~~~
 
 ## CONFIGURATION
--------------
 
 ### Database
 
